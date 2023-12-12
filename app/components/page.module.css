@@ -1,0 +1,16 @@
+.progressbar{
+    border-radius: 4%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    fill: red;
+}
+
+/* .progressbar::-moz-progress-bar {
+    background-color: red
+  } */
+
+.progressbar::-webkit-progress-value {
+    background: linear-gradient(#7dace4,#95e8d7)
+  }

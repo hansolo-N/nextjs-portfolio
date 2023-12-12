@@ -8,5 +8,19 @@ body{
     padding-right: 2rem;
     background-color: #f8ecd9;
     scroll-behavior: smooth;
-    
+    height: 1800px;
+    color: red;
+    position: relative;
 }
+
+body::-webkit-scrollbar {
+    width: 8px; /* Set the scrollbar width */
+    height: 10px; /* Set the scrollbar height */
+    border-radius: 5px;
+    background-color: #ddd; /* Define the track color */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: black; /* Define the thumb color */
+    border-radius: 5px; /* Add rounded corners to the thumb */
+  }
