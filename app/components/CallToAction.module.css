@@ -1,0 +1,17 @@
+.intro{
+    font-family: 'Rubik',sans-serif;
+    font-size: medium;
+    color: red;
+}
+
+.emoji{
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+.summary{
+    font-family: 'Rubik',sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    text-wrap: wrap;
+    width: 300px;
+}

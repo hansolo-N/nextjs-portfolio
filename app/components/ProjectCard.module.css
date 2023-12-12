@@ -1,0 +1,26 @@
+.card{
+    background-color: #dbe9b7;
+    color: black;
+    height: 400px;
+    width: 200px;
+}
+
+.cardImg{
+height: 100px;
+height: 200px;
+padding: 0.5rem;
+border: none;
+border-radius: 5px;
+}
+
+
+.btn-container{
+    display: flex;
+justify-content: center;
+}
+
+.btn{
+    width: 86px;
+    background-color: black;
+    color: white;
+}

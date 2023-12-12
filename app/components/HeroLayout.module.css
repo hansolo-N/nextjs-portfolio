@@ -1,0 +1,15 @@
+.img{
+    
+    clip-path: polygon(30% 0%,
+    10% 100%,
+    80% 100%,
+    90% 0%);
+    height: 600px;
+    width: 600px;
+    text-align: center;
+}
+
+.container{
+    height: 700px;
+    margin: auto 0;
+}
