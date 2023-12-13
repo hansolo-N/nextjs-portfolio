@@ -1,5 +1,5 @@
 .projectsContainer{
-    overflow-x: scroll; /* Enable vertical scrolling */
+    overflow: hidden; /* Enable vertical scrolling */
     padding: 1rem;
     translate: 1500px;
 }

@@ -9,7 +9,7 @@ function CallToAction() {
     <div>
         <Header/>
         <p className={styles.intro}>hello there, I am Nasr</p>
-        <p className={styles.summary}>Crafting web experiences with passion & code.</p>
+        <p className={styles.summary}>Crafting web <span className={styles.highlight}>experiences</span> with passion & code.</p>
     </div>
   )
 }

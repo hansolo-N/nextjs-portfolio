@@ -1,17 +1,19 @@
 .intro{
-    font-family: 'Rubik',sans-serif;
     font-size: medium;
     color: red;
 }
 
-.emoji{
-    font-family: 'Noto Color Emoji', sans-serif;
-}
+/* .emoji{
+
+} */
 
 .summary{
-    font-family: 'Rubik',sans-serif;
     font-size: 24px;
     font-weight: 900;
     text-wrap: wrap;
     width: 300px;
+}
+.highlight{
+    font-size: 36px;
+    color: #a5bdfd;
 }

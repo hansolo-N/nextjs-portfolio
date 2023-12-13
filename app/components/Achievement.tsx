@@ -33,6 +33,8 @@ const Header = styled.h1`
 
 const Paragraph = styled.p`
     font-size: medium;
+   color: #5c5470;
+   font-weight: 600;
 `
 const Icon = styled.span`
     font-size: 36px;

@@ -21,16 +21,13 @@ function Projects() {
     setProgress((latest/1000))
     console.log(typeof(progress))
   })
+  
   return (
     <motion.div className={`flex gap-4 ${styles.projectsContainer}`}  style={{translateX: -2300 * progress}}>
         <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
         <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-
+        <i className="ci ci-spotify ci-2x"></i>
+    
     </motion.div>
   )
 }
