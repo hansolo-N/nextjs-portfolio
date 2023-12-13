@@ -1,5 +1,7 @@
 .projectsContainer{
     overflow-x: scroll; /* Enable vertical scrolling */
+    padding: 1rem;
+    translate: 1500px;
 }
 .projectsContainer::-webkit-scrollbar {
     width: 8px; /* Set the scrollbar width */

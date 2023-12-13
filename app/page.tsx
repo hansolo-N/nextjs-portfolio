@@ -4,6 +4,7 @@ import HeroLayout from './components/HeroLayout'
 import Projects from './components/Projects'
 import styles from './components/page.module.css'
 import { motion,useMotionValue,useMotionValueEvent, useScroll } from "framer-motion"
+import About from './components/About'
 
 export default function Home() {
   const [progress,setProgress] = useState(0)
@@ -24,6 +25,7 @@ export default function Home() {
     {progress > 0 && <motion.progress value={progress} max={1} className={styles.progressbar}>progress bar</motion.progress>}
     <HeroLayout/>
     <Projects/>
+    <About/>
     </motion.div>
       
 

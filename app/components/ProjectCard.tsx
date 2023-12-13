@@ -29,8 +29,8 @@ function ProjectCard({cardTitle,imgSrc,cardContent}:Props): JSX.Element {
   <CardContent className={styles[`card-content`]}>
     {cardContent}
   </CardContent>
-  <CardFooter className={styles[`btn-container`]}>
-  <Link href='' className={`${buttonVariants({ variant: "outline" })} ${styles.btn}`}>Live Demo</Link>
+  <CardFooter className={`${styles[`btn-container`]}`}>
+  <Link href='' className={`${buttonVariants({ variant: "outline" })} ${styles.btn} mr-2`}>Live Demo</Link>
   <Link href='' className={`${buttonVariants({ variant: "outline" })} ${styles.btn}`}>Github</Link>
   </CardFooter>
 </Card>
