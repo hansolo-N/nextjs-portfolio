@@ -13,6 +13,8 @@ body{
     position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
+    font-family: 'Roboto Condensed',sans-serif
+    
 }
 
 body::-webkit-scrollbar {

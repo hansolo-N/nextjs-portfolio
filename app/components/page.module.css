@@ -4,12 +4,16 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 40;
+    height: 8px;
 }
 
-/* .progressbar::-moz-progress-bar {
-    background-color: red
-  } */
+.progressbar::-moz-progress-bar {
+  border-radius: 4%;
+  }
 
 .progressbar::-webkit-progress-value {
-    background: linear-gradient(#7dace4,#95e8d7)
+    background: linear-gradient(white, #feffdf);
+    border-radius: 5px;
+
   }
