@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import styles from './components/page.module.css'
 import { motion,useMotionValue,useMotionValueEvent, useScroll } from "framer-motion"
 import About from './components/About'
+import TechStackNav from './components/TechStackNav'
 
 export default function Home() {
   const [progress,setProgress] = useState(0)
@@ -26,8 +27,7 @@ export default function Home() {
     <HeroLayout/>
     <Projects/>
     <About/>
+    <TechStackNav/>
     </motion.div>
-      
-
     )
 }

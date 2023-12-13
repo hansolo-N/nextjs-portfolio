@@ -8,7 +8,7 @@ import { RiBug2Line } from "react-icons/ri";
 
 function About() {
   return (
-    <div className={`${styles['grid-container']}`}>
+    <div className={`${styles['grid-container']} mb-4`}>
       <h1 className={`${styles.header} underline underline-offset-8`}>ABOUT</h1>
       <div className={`grid grid-cols-[1fr,1fr] `}>
       <Image className= {`${styles['about-img']}`} src="/shibuya.jpg" alt='' height={300} width={300}/>

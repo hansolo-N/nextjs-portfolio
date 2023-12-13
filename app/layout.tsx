@@ -24,10 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
       <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.3/src/app/ci.min.css"
       />
+      </head>
+     
       <body style={roboto.style}>{children}</body>
     </html>
   )
