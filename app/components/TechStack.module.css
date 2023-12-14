@@ -1,40 +1,63 @@
-.stack-container{
-    display: flex;
-    width: 800px;
-    height: 100px;
-    justify-content: center;
-    gap: 2rem;
+.gallery{
+    height: 400px;
+    width: 500px;
     margin: 0 auto;
 }
-.icons{
+
+.swiper-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.slides{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin: auto;
+}
+
+.swiper-controller{
+
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.swiper-btn-next{
+color: green;
+border: none;
+background: none
+}
+
+.swiper-btn-prev {
+background: none;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination{
     display: flex;
     position: relative;
-
+    background-color: red;
 }
 
-.icon1{
-    display: flex;
-
+.active-icon{
+    transform: scale(1.1);
 }
 
-.icon1{
-    display: flex;
-
+.prev-icon{
+    opacity: 0.4;
 }
 
-.icon1{
-    display: flex;
-
-}
-
-
-
-
-.btn{
-    font-size: 24px;
-    background-color: black;
-    color: white;
-    width: 100px;
-    height: 50px;
-    border-radius: 30%;
+.next-icon{
+    opacity: 0.8;
 }
