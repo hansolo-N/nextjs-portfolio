@@ -1,81 +1,95 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react'
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination'
 import 'swiper/css/navigation';
-import { EffectCoverflow,Pagination,Navigation } from 'swiper/modules';
+import { EffectFade,Pagination,Navigation } from 'swiper/modules';
+import { useSwiper,useSwiperSlide } from 'swiper/react';
 import styles from './TechStack.module.css'
 import icons from '../data/Icons'
 import { Button } from "@/components/ui/button"
 import { IoChevronBackSharp } from "react-icons/io5";
 import { IoChevronForward } from "react-icons/io5";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+import Link from 'next/link';
+
+
 
 function TechStackNav() {
     const [index,setIndex] = useState(0)
     const iconsLength = icons.length -1
+    const paginationEl = useRef(null)
+    const btnPrev = useRef(null)
+    const btnNext = useRef(null)
 
-    function handleDecreaseClick():void{
-        if(index <= 0) setIndex(iconsLength)
-        setIndex((index)=>index-1)
-    }
-
-    function handleIncreaseClick():void{
-        if(index >= iconsLength) setIndex(0)
-        
-        setIndex((index)=>index+1)
-    }
-
+  function openWindow(): void{
+    window.open(`https://en.wikipedia.org/wiki/Figma`);
+  }
 
   return (
     <div className={`${styles['gallery']}`}>
-        <div >
-        { icons && <div >
+        
+      <h1> Tech Stack</h1>
         <Swiper className={`${styles['swiper-container']}`} effect={'coverflow'} grabCursor={true} centeredSlides={true}  slidesPerView={3} 
-        coverflowEffect={
-          {
-            rotate:0,
-            stretch:0,
-            depth:100,
-            modifier: 2.5
-          }}
+        
+         fadeEffect={
+            {
+              crossFade: true
+            }
+          }
+          loop= {true}
           spaceBetween={50}
-          pagination={{el:'',clickable:true}}
-          navigation={{
-            nextEl: `${styles['swiper-btn-next']}`,
-            prevEl: `${styles['swiper-btn-prev']}`,
+          pagination={{
+            el: paginationEl.current,
+            clickable:true,
+            type: 'bullets'
           }}
-          modules={[EffectCoverflow,Pagination,Navigation]}
+          navigation={{
+            nextEl: btnNext.current,
+            prevEl: btnPrev.current,
+          }}
+          modules={[EffectFade,Pagination,Navigation]}
           >
           <div className={styles.slides}>
-          <SwiperSlide>
-            {({isPrev})=>
-          <p className={`${styles.icon}`}><i className={`ci ${icons.at(index-1)?.name} ci-4x ${isPrev? `${styles['prev-icon']}`: ''}`}></i></p>
-          }
-          </SwiperSlide>
-          <SwiperSlide>
-          {({isActive})=>
-          <p className={`${styles.icon}`}><i className={`ci ${icons.at(index)?.name} ci-4x ${isActive? `${styles['active-icon']}`: ''}`}></i></p>
-          }
-          </SwiperSlide>
-          <SwiperSlide>
-            {({isNext})=>
-          <p className={`${styles.icon}`}><i className={`ci ${icons.at(index+1)?.name} ci-4x ${isNext? `${styles['next-icon']}`: ''} `}></i></p>
-        }
-          </SwiperSlide>
 
+            {icons.map((slide)=> 
+            <SwiperSlide key={slide.iconName}>
+              {({ isActive }) => (
+                <HoverCard>
+                  <HoverCardTrigger>
+                  <p className={`${styles.icon}`}><i className={`ci ${slide.iconName} ci-4x`}></i></p>
+                </HoverCardTrigger>
+                { isActive && <HoverCardContent>
+                    <p>{slide.name}</p>
+                    <a onClick={openWindow}>Learn More</a>
+                    {/* <Link href={`https://en.wikipedia.org/wiki/${slide.name}`} target=''>Learn More..</Link> */}
+                </HoverCardContent>}
+                </HoverCard>
+                )}
+          </SwiperSlide>)}
+        
           </div>
          
           <div className={`${styles[`swiper-controller`]}`}>
-            <Button  className= {`${styles['swiper-btn-prev']}`} ><IoChevronBackSharp/></Button>
-            <Button className= {`${styles['swiper-btn-next']}`} ><IoChevronForward/></Button>
+           
+           <div className={`${styles['btn-container']}`}>
+            <Button  ref={btnPrev} className= {`${styles['swiper-btn-prev']}`} ><IoChevronBackSharp/></Button>
+            <Button  ref={btnNext}  className= {`${styles['swiper-btn-next']}`} ><IoChevronForward/></Button>
+           </div>
+            
+          
+            <div ref= {paginationEl} className={`${styles[`swiper-pagination-custom`]}`}></div>
           </div>
-          <div className={`${styles.pagination}`}>background</div>
+          
         </Swiper>
-        </div>
-        }
-        </div>
+        
+        
         
        
     </div>
