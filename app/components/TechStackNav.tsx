@@ -1,12 +1,11 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React, {useRef} from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react'
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination'
 import 'swiper/css/navigation';
-import { EffectFade,Pagination,Navigation } from 'swiper/modules';
-import { useSwiper,useSwiperSlide } from 'swiper/react';
+import { Autoplay,EffectCoverflow,Pagination,Navigation } from 'swiper/modules';
 import styles from './TechStack.module.css'
 import icons from '../data/Icons'
 import { Button } from "@/components/ui/button"
@@ -17,20 +16,18 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import Link from 'next/link';
 
 
 
 function TechStackNav() {
-    const [index,setIndex] = useState(0)
-    const iconsLength = icons.length -1
     const paginationEl = useRef(null)
     const btnPrev = useRef(null)
     const btnNext = useRef(null)
 
-  function openWindow(): void{
-    window.open(`https://en.wikipedia.org/wiki/Figma`);
+  function openWindow(name:string): any{
+     return window.open(`https://en.wikipedia.org/wiki/${name}`);
   }
+
 
   return (
     <div className={`${styles['gallery']}`}>
@@ -38,12 +35,18 @@ function TechStackNav() {
       <h1> Tech Stack</h1>
         <Swiper className={`${styles['swiper-container']}`} effect={'coverflow'} grabCursor={true} centeredSlides={true}  slidesPerView={3} 
         
-         fadeEffect={
-            {
-              crossFade: true
-            }
-          }
-          loop= {true}
+         coverflowEffect={{
+          depth:100,
+          modifier: 2.5,
+          rotate:50,
+          slideShadows: false
+         }}
+         loop= {true}
+          autoplay={{
+            delay:3000,
+            disableOnInteraction: false
+          }}
+          
           spaceBetween={50}
           pagination={{
             el: paginationEl.current,
@@ -54,28 +57,38 @@ function TechStackNav() {
             nextEl: btnNext.current,
             prevEl: btnPrev.current,
           }}
-          modules={[EffectFade,Pagination,Navigation]}
+          modules={[EffectCoverflow,Pagination,Navigation,Autoplay]}
           >
+           
           <div className={styles.slides}>
-
-            {icons.map((slide)=> 
+          
+            {icons.map((slide)=>
+            
             <SwiperSlide key={slide.iconName}>
+              
               {({ isActive }) => (
+                
                 <HoverCard>
+                  
                   <HoverCardTrigger>
-                  <p className={`${styles.icon}`}><i className={`ci ${slide.iconName} ci-4x`}></i></p>
+                  
+                    <div className={`${styles.icon}`}>
+                    <i className={`ci ${slide.iconName} ci-4x`}></i>
+                    </div>
+                    
                 </HoverCardTrigger>
                 { isActive && <HoverCardContent>
                     <p>{slide.name}</p>
-                    <a onClick={openWindow}>Learn More</a>
+                    
                     {/* <Link href={`https://en.wikipedia.org/wiki/${slide.name}`} target=''>Learn More..</Link> */}
                 </HoverCardContent>}
                 </HoverCard>
                 )}
-          </SwiperSlide>)}
+          </SwiperSlide>
+          )}
         
           </div>
-         
+          
           <div className={`${styles[`swiper-controller`]}`}>
            
            <div className={`${styles['btn-container']}`}>
@@ -86,7 +99,6 @@ function TechStackNav() {
           
             <div ref= {paginationEl} className={`${styles[`swiper-pagination-custom`]}`}></div>
           </div>
-          
         </Swiper>
         
         

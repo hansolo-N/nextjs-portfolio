@@ -6,6 +6,7 @@ import styles from './components/page.module.css'
 import { motion,useMotionValue,useMotionValueEvent, useScroll } from "framer-motion"
 import About from './components/About'
 import TechStackNav from './components/TechStackNav'
+import Contact from './components/ContactForm'
 
 export default function Home() {
   const [progress,setProgress] = useState(0)
@@ -28,6 +29,7 @@ export default function Home() {
     <Projects/>
     <About/>
     <TechStackNav/>
+    <Contact/>
     </motion.div>
     )
 }
