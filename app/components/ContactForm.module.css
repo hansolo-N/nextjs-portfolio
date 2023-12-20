@@ -3,3 +3,17 @@
     width: 600px;
     margin: 0 auto;
 }
+
+.form-input{
+    background-color: rgb(255 251 235);
+    /* border-bottom: 1px solid black; */
+    border-radius: 0;
+    
+}
+
+.form-textArea{
+    background-color: rgb(255 251 235);
+    /* border-bottom: 1px solid black; */
+    border-radius: 5px;
+    height: 200px;
+}

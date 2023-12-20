@@ -41,6 +41,7 @@ console.log(values)
 
   return (
     <div className={`${styles['form-container']}`}>
+      <h1>Contact Me</h1>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className={`${styles['form-container']}space-y-8`}>
 
@@ -49,13 +50,11 @@ console.log(values)
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="type your name..." {...field} />
+              <FormLabel>Name</FormLabel>
+              <FormControl >
+                <Input className={`${styles[`form-input`]} border-b border-2 border-solid border-t-0 border-r-0 border-l-0 `} placeholder="type your name..." {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
+            
               <FormMessage />
             </FormItem>
           )}
@@ -68,19 +67,33 @@ console.log(values)
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="enter your email address" {...field} />
+                <Input  className={`${styles[`form-input`]} border-b border-2 border-solid border-t-0 border-r-0 border-l-0 `} placeholder="enter your email address" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your Email name.
-              </FormDescription>
+              
               <FormMessage />
             </FormItem>
           )}
         />
 
-       
+          <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Subject</FormLabel>
+              <FormControl>
+                <Textarea className={`${styles[`form-textArea`]}`} placeholder="enter your text here" {...field}/>
+              </FormControl>
+              
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-        <Button type="submit">Submit</Button>
+      
+
+
+        <Button className={`mt-4`}type="submit">Submit</Button>
       </form>
     </Form>
     </div>
