@@ -11,7 +11,7 @@ function About() {
     <div className={`${styles['grid-container']} mb-4`}>
       <h1 className={`${styles.header} underline underline-offset-8`}>ABOUT</h1>
       <div className={`grid grid-cols-[1fr,1fr] `}>
-      <Image className= {`${styles['about-img']}`} src="/shibuya.jpg" alt='' height={300} width={300}/>
+      <Image className= {`${styles['about-img']}`} src="/about.jpg" alt='' height={200} width={300}/>
 
         <div className='grid grid-cols-[1fr,1fr] grid-rows-2 gap-4'>
           <Achievement icon={<HiAcademicCap/>} p1='B.Sc. Computer Science' p2='Information Systems' header='Education'/>

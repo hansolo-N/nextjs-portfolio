@@ -40,6 +40,10 @@ console.log(values)
   }
 
   return (
+    <div className={styles.container}>
+      <div>
+        <p>hello</p>
+      </div>
     <div className={`${styles['form-container']}`}>
       <h1>Contact Me</h1>
     <Form {...form}>
@@ -67,7 +71,7 @@ console.log(values)
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input  className={`${styles[`form-input`]} border-b border-2 border-solid border-t-0 border-r-0 border-l-0 `} placeholder="enter your email address" {...field} />
+                <Input  className={`${styles[`form-input`]}  border-solid border-t-0 border-r-0 border-l-0 `} placeholder="enter your email address" {...field} />
               </FormControl>
               
               <FormMessage />
@@ -96,6 +100,7 @@ console.log(values)
         <Button className={`mt-4`}type="submit">Submit</Button>
       </form>
     </Form>
+    </div>
     </div>
   )
 }

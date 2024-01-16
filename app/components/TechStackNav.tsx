@@ -32,7 +32,7 @@ function TechStackNav() {
   return (
     <div className={`${styles['gallery']}`}>
         
-      <h1> Tech Stack</h1>
+      <h1 className={styles.header}> Tech Stack</h1>
         <Swiper className={`${styles['swiper-container']}`} effect={'coverflow'} grabCursor={true} centeredSlides={true}  slidesPerView={3} 
         
          coverflowEffect={{

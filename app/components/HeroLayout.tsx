@@ -10,7 +10,7 @@ function HeroLayout() {
            <CallToAction/>
         </div>
         <div className='grid-auto-cols'>
-          <Image className= {styles.img} src='/test2.jpg' alt='image not found' width={600} height={300}/>
+          <Image className= {styles.img} src='/portfolio1.jpg' alt='image not found' width={600} height={300}/>
         </div>
     </div>
   )

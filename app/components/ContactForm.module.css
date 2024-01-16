@@ -6,14 +6,27 @@
 
 .form-input{
     background-color: rgb(255 251 235);
-    /* border-bottom: 1px solid black; */
+    border-bottom: 3px solid black;
     border-radius: 0;
     
+}
+
+.form-input:focus{
+    border: 0 0 0 0px;
+    box-shadow: none;
+    border-color: #42b883;
 }
 
 .form-textArea{
     background-color: rgb(255 251 235);
     /* border-bottom: 1px solid black; */
     border-radius: 5px;
-    height: 200px;
+    height: 150px;
+}
+
+.container{
+    margin: 0 auto;
+ display: grid;
+ width: 1300px;
+ grid-template-columns: 1fr 1fr;
 }
