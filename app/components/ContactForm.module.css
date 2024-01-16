@@ -2,17 +2,20 @@
     height: 500px;
     width: 600px;
     margin: 0 auto;
+    /* transform: translateX(500px); */
 }
 
 .form-input{
     background-color: rgb(255 251 235);
     border-bottom: 3px solid black;
     border-radius: 0;
+    font-size: 18px;
+    padding: 0;
     
 }
 
 .form-field{
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .form-input:focus{
@@ -49,6 +52,9 @@
 
 .submit-btn{
     transition: all 0.8s ;
+    font-size: 22px;
+    background-color: black;
+    color: white;
 
 }
 
@@ -84,4 +90,15 @@ transform: translate(-600px);
     font-size: 36px;
     text-transform: capitalize;
     font-weight: bold;
+}
+
+.name-field{
+    transform: translateX(700px);
+}
+.email-field{
+    transform: translateX(1400px);
+}
+
+.textInput-field{
+    transform: translateX(2100px); 
 }

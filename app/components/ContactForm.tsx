@@ -57,60 +57,69 @@ console.log(values)
         <motion.div className={`${styles.call2} text-violet`} style={{translateX:150*progress}}>Let&apos;s build something <span className={`text-5xl text-blue-3a00 font-extrabold font tracking-wider uppercase text-violet-500`}>epic.</span></motion.div>
       </div>
     <div className={`${styles['form-container']}`}>
-      <h1 className={`mb-4 text-3xl`}>Contact Me</h1>
+      
     <Form {...form}>
+    <motion.div >
+      <h1 className={`mb-4 text-3xl`}>Contact Me</h1>
       <form onSubmit={form.handleSubmit(onSubmit)} className={`${styles['form-container']}space-y-8`}>
 
+      <motion.div style={{translateX:-605*progress}}>
       <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem className={`mb-4 `}>
+            <FormItem className={`mb-4 ${styles[`name-field`]} `}>
               <FormLabel className={`${styles[`form-field`]}`}>Name</FormLabel>
               <FormControl >
-                <Input className={`${styles[`form-input`]} border-b border-2 border-solid border-t-0 border-r-0 border-l-0 `} placeholder="type your name..." {...field} />
+                <Input className={`${styles[`form-input`]} border-b border-2 border-solid border-t-0 border-r-0 border-l-0 `} placeholder="Type your name..." {...field} />
               </FormControl>
             
               <FormMessage />
             </FormItem>
           )}
         />
+      </motion.div>
 
+        <motion.div style={{translateX:-1209*progress}}>
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem className={`mb-4`}>
+            <FormItem className={`mb-4 ${styles[`email-field`]}`}>
               <FormLabel className={`${styles[`form-field`]}`}>Email</FormLabel>
               <FormControl>
-                <Input  className={`${styles[`form-input`]}  border-solid border-t-0 border-r-0 border-l-0 `} placeholder="enter your email address" {...field} />
+                <Input  className={`${styles[`form-input`]}  border-solid border-t-0 border-r-0 border-l-0 `} placeholder="Enter your email address" {...field} />
               </FormControl>
               
               <FormMessage />
             </FormItem>
           )}
         />
+        </motion.div>
 
+          <motion.div style={{translateX:-1812*progress}}>
           <FormField
           control={form.control}
           name="subject"
           render={({ field }) => (
-            <FormItem>
+            <FormItem  className={`mb-4 ${styles[`textInput-field`]}`}>
               <FormLabel className={`${styles[`form-field`]}`}>Subject</FormLabel>
               <FormControl>
-                <Textarea className={`${styles[`form-textArea`]}`} placeholder="enter your text here" {...field}/>
+                <Textarea className={`${styles[`form-textArea`]}`} placeholder="Enter your text here" {...field}/>
               </FormControl>
               
               <FormMessage />
             </FormItem>
           )}
         />
+        </motion.div>
 
       
 
 
         <Button className={`mt-4 ${styles[`submit-btn`]}`}type="submit">Submit</Button>
       </form>
+      </motion.div>
     </Form>
     </div>
     </div>
