@@ -9,19 +9,16 @@ function Projects() {
 
 
   const [progress,setProgress] = useState(0)
-  const progressValue = useMotionValue(0);
-  const { scrollY ,scrollYProgress} = useScroll()
+  const { scrollY} = useScroll()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setProgress((latest/1000))
+    setProgress((latest/1800))
   })
   
   return (
     <motion.div className={`flex gap-4 ${styles.projectsContainer}`}  style={{translateX: -2300 * progress}}>
         <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
         <ProjectCard cardTitle='project1' imgSrc='shibuya.jpg' cardContent='this is an updated version of my portfolio using Next.Js with typescript and some other react libraries'/>
-        
-    
     </motion.div>
   )
 }

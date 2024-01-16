@@ -7,18 +7,16 @@ import { motion,useMotionValue,useMotionValueEvent, useScroll } from "framer-mot
 import About from './components/About'
 import TechStackNav from './components/TechStackNav'
 import Contact from './components/ContactForm'
+import Footer from './components/Footer'
 
 export default function Home() {
   const [progress,setProgress] = useState(0)
   const progressValue = useMotionValue(0);
   const { scrollY ,scrollYProgress} = useScroll()
 
-  const current = scrollYProgress.get()
-
-
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setProgress((latest/1000))
+    setProgress((latest/1800))
   })
 
 
@@ -30,6 +28,7 @@ export default function Home() {
     <About/>
     <TechStackNav/>
     <Contact/>
+    <Footer/>
     </motion.div>
     )
 }

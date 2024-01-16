@@ -73,7 +73,7 @@ function TechStackNav() {
                   <HoverCardTrigger>
                   
                     <div className={`${styles.icon}`}>
-                    <i className={`ci ${slide.iconName} ci-4x`}></i>
+                    <i className={`ci ${slide.iconName} ci-5x`}></i>
                     </div>
                     
                 </HoverCardTrigger>

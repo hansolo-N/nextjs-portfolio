@@ -1,5 +1,5 @@
 .form-container{
-    height: 600px;
+    height: 500px;
     width: 600px;
     margin: 0 auto;
 }
@@ -9,6 +9,10 @@
     border-bottom: 3px solid black;
     border-radius: 0;
     
+}
+
+.form-field{
+    font-size: 18px;
 }
 
 .form-input:focus{
@@ -24,9 +28,60 @@
     height: 150px;
 }
 
+.form-textArea:focus{
+    box-shadow: none;
+    border-color: #42b883;
+    border-width: 3px;
+}
+
 .container{
     margin: 0 auto;
  display: grid;
  width: 1300px;
+ height: 550px;
  grid-template-columns: 1fr 1fr;
+ overflow: hidden;
+ border-radius: 5px;
+ border: solid 2px black;
+ padding: 1.5rem;
+ column-gap: 2rem;
+}
+
+.submit-btn{
+    transition: all 0.8s ;
+
+}
+
+.submit-btn:hover{
+    background-color: #42b883;
+    
+}
+
+.callTo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.call1{
+    font-size: 36px;
+position: absolute;
+top: 25%;
+left: 0;
+transform: translate(-600px);
+}
+
+.call2{
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-600px);
+}
+
+.greeting{
+    font-size: 36px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
